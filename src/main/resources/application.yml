@@ -1,0 +1,6 @@
+springdoc:
+  swagger-ui:
+    path: hihi.html
+  version: v1
+  paths-to-match:
+    - /
