@@ -1,14 +1,17 @@
 package study.seoyun.springsecurityjwt.dto;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
 
 @Getter @Setter @Builder
 @AllArgsConstructor
-@ToString
-@NoArgsConstructor
 public class MemberDto {
 
     private Long memberId;
+    private String loginId;
     private String name;
+    private String email;
 
 }
