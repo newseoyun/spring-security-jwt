@@ -12,7 +12,7 @@ import java.util.List;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class ErrorResponse {
 
-    private int code;
+    private String code;
     private String message;
     private List<FieldError> errors;
 

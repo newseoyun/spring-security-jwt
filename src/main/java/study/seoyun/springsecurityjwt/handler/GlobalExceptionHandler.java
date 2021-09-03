@@ -13,7 +13,7 @@ public class GlobalExceptionHandler {
     // default
     @ExceptionHandler(Exception.class)
     protected ResponseEntity<ErrorResponse> handleException(Exception e) {
-        log.error("Exception: {}", e.getLocalizedMessage());
+        log.error("[Exception] {}", e.getLocalizedMessage());
         e.printStackTrace();
         return new ResponseEntity<>(ErrorResponse.of(ErrorCode.HI_EXCEPTION), HttpStatus.BAD_REQUEST);
     }

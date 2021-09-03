@@ -5,13 +5,13 @@ import lombok.Getter;
 @Getter
 public enum ErrorCode {
 
-    HI_EXCEPTION(200, "HIHI"),
-    HELLO_EXCEPTION(200, "HELLO");
+    HI_EXCEPTION("HI_EXCEPTION", "HIHI~~~"),
+    HELLO_EXCEPTION("HELLO_EXCEPTION", "HELLO~~~");
 
-    private int code;
+    private String code;
     private String message;
 
-    ErrorCode(int code, String message) {
+    ErrorCode(String code, String message) {
         this.code = code;
         this.message = message;
     }
