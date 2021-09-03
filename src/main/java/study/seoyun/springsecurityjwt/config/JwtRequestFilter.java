@@ -12,12 +12,14 @@ import java.io.IOException;
 
 @RequiredArgsConstructor
 public class JwtRequestFilter extends OncePerRequestFilter {
-
+    
     private final MemberService memberService;
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
             throws ServletException, IOException {
+
+        // 토큰 처리 로직
 
 
         filterChain.doFilter(request, response);
