@@ -1,6 +1,7 @@
 package study.seoyun.springsecurityjwt.config;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
@@ -80,7 +81,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers("/").permitAll() // 세팅 필요
                 .antMatchers("/admin").hasAuthority("ROLE_ADMIN")
-                .anyRequest().authenticated()
+                //.anyRequest().authenticated()
+                .anyRequest().permitAll()
 
                 .and()
                 .addFilterBefore(jwtRequestFilter(), UsernamePasswordAuthenticationFilter.class);
