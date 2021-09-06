@@ -2,8 +2,10 @@ package study.seoyun.springsecurityjwt.dto;
 
 import lombok.*;
 
-@Getter @Setter @Builder
+@Getter
+@NoArgsConstructor
 @AllArgsConstructor
+@ToString
 public class LoginDto {
 
     private String loginId;
